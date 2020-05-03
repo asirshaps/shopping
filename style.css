@@ -1,0 +1,52 @@
+.footer {
+    position: fixed;
+    left: 5;
+    bottom: 0;
+    width: 100%;
+    background-color:palevioletred;
+    color:black;
+    text-align: left;
+    height: 37px;
+ }
+ p{
+     
+     size: 50px;
+     color: black;
+ }
+#demo {
+    text-align: center;
+}
+#tbl{
+    border-width: 12px;
+    padding: 12px;
+    width: 97px;
+    margin-left: auto;
+    margin-right: auto;
+    border: 2px solid black;
+    }
+
+thead{
+    text-align: center;
+    background-color:indianred;
+    font-family: inherit;
+    border: 1px solid black;
+}
+td{
+    text-align: center;
+    background-color:wheat;
+    border: 1px solid black;
+
+}
+th{
+    text-align: center;
+    padding: 20px;
+    border: 1px solid black;
+    background-color:indianred;
+
+}
+.navbar-brand{
+    text-align: center;
+    padding: 42%;
+    text-decoration: underline;
+
+}

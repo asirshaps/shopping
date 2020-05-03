@@ -1,0 +1,90 @@
+
+
+{
+
+"list":[
+    {
+      "Sl_NO": 1,
+      "NAME": "Bathing soap",
+      "QUANTITY": "4",
+      "UNIT": "Bar",
+     "DEPARTMENT": "Health care product",
+     "NOTES": "Medimix"
+      
+    },
+
+    {
+      "Sl_NO": 2,
+      "NAME": "Tea powder",
+      "QUANTITY": "1",
+      "UNIT": "Kilogram",
+     "DEPARTMENT": "Food product",
+     "NOTES": "Red Label"
+    },
+    {
+      "Sl_NO": 3,
+      "NAME": "Floor cleaner",
+      "QUANTITY": "1",
+      "UNIT": "Number",
+     "DEPARTMENT": "Health care product",
+     "NOTES": "Lizol"
+      
+    },
+    {
+      "Sl_NO": 4,
+      "NAME": "White gram",
+      "QUANTITY": "1",
+      "UNIT": "Kilogram",
+     "DEPARTMENT": "Food product",
+     "NOTES": "fssai certified only"
+    },
+    {
+      "Sl_NO": 5,
+      "NAME": "Coconut oil",
+      "QUANTITY": "1",
+      "UNIT": "Litre",
+     "DEPARTMENT": "Food product",
+     "NOTES": "KLF Nirmal"
+    },
+    {
+      "Sl_NO": 6,
+      "NAME": "Banana",
+      "QUANTITY": "2",
+      "UNIT": "Kilogram",
+     "DEPARTMENT": "Food product",
+     "NOTES": "Buy quality product"
+    },
+    {
+      "Sl_NO": 7,
+      "NAME": "Hand wash",
+      "QUANTITY": "1",
+      "UNIT": "Number",
+     "DEPARTMENT": "Health care product",
+     "NOTES": "Dettol"
+    },
+    {
+      "Sl_NO": 8,
+      "NAME": "Rice",
+      "QUANTITY": "15",
+      "UNIT": "Kilogram",
+     "DEPARTMENT": "Food product",
+     "NOTES": "Gayathri"
+    },
+    {
+      "Sl_NO": 9,
+      "NAME": "Soyabean",
+      "QUANTITY": "1",
+      "UNIT": "Kilogram",
+     "DEPARTMENT": "Food product",
+     "NOTES": "Check expiry date"
+    },
+    {
+      "Sl_NO": 10,
+      "NAME": "Potato",
+      "QUANTITY": "0.5",
+      "UNIT": "Kilogram",
+     "DEPARTMENT": "Food product",
+     "NOTES": "Buy quality product"
+    }  
+]
+}

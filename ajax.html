@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Grocery Shopping List</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</head>
+<body background="/imagess/image1.jpg">
+    <nav class="navbar navbar-expand-lg navbar-light bg-danger">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <a class="navbar-brand" href="#">ITEMS TO BE PURCHASED</a>
+      
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+          <!-- <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled" href="#">Disabled</a>
+            </li>
+          </ul>
+          -->
+        </div>
+      </nav><br>
+      <div id = "demo"><br>
+       
+         <p>Click on the button to see the complete list</p> 
+        <button id="populate">Click Here</button>
+       
+      </div><br>
+      <table id="tbl">
+        <thead>
+                <!-- <tr>
+                <td>Sl_NO</td>
+                <td>NAME</td>
+                <td>QUANTITY</td>
+                <td>UNIT</td>
+                <td>DEPARTMENT</td>
+                <td>NOTES</td>
+              </tr>   -->
+        </thead>
+        <tbody id="result_area">
+          <!-- <tr>
+            <td>Sl_NO</td>
+            <td>NAME</td>
+            <td>QUANTITY</td>
+            <td>UNIT</td>
+            <td>DEPARTMENT</td>
+            <td>NOTES</td>
+          </tr>   -->
+              <!-- <tr>
+               <td>please wait</td>
+                
+              </tr> -->
+        </tbody>
+      </table>
+    <script>
+       var xhttp = new XMLHttpRequest;
+     xhttp.open("GET","help.json",true);
+     document.getElementById("populate").addEventListener("click",function(){
+         xhttp.send();
+      })
+     // eventlistener
+    xhttp.onreadystatechange = function(){
+        if(xhttp.readyState==4){
+                            if(xhttp.status==200){
+                                // alert("successful");
+                                // alert(xhttp.responseText);
+                                let result_data = JSON.parse(xhttp.responseText);
+                                let output = result_data.list;
+                                // console.log(output);
+                            
+                                 let html_content ="<tr><th>Sl_NO</th><th>NAME</th><th>QUANTITY</th><th>UNIT</th><th>DEPARTMENT</th><th>NOTES</th></tr>";
+                                for(let i=0;i<output.length;++i){
+                                    let current_record = output[i];
+                                    html_content = html_content+"<tr><td>"+current_record.Sl_NO+"</td><td>"+current_record.NAME+"</td><td>"+current_record.QUANTITY+"</td><td>"+current_record.UNIT+"</td><td>"+current_record.DEPARTMENT+"</td><td>"+current_record.NOTES+"</td></tr>"
+                                }
+                                document.getElementById("result_area").innerHTML = html_content;
+                            }     
+ 
+                            }
+                            // else{
+                            //     alert("error loading");
+                            // }
+        }
+    
+    </script>  
+</body>
+ <div class="footer">
+    <p>Happy Shopping, Copyright &copy;</p>
+  </div>  
+
+</html>
